@@ -1,0 +1,301 @@
+/**
+ * @STGA2016 - SI - FrÃ©dÃ©ric GACON
+ * @STGA2018 - SI - Jean-Michel MARINO
+ * 
+ * 20190918 : nouvelle couleur MÃ¶bius : #bd2d35
+ */
+
+body {
+  font-family: Helvetica, Verdana, Times, sans-serif;
+  color: white;
+  font-size: 3.125vw;
+  font-weight: bold;
+  background-color: black;
+}
+
+/* overlay pour la gestion de la mise au noir de la BIV */
+div#overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* head section*/
+#divHeader {
+  padding: 0 0 0 0;
+}
+
+.headInfo {
+  text-align: center;
+  padding: 0 0 0 0;  
+}
+
+#headInfoStop {
+  font-family: monospace, sans-serif;
+  font-size: 1.09375vw;
+
+  font-weight: normal;
+  padding: 0 0 0 0 ;
+}
+.headLogo {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+#headDate {
+  font-size: 2vw;
+  text-align: center;
+}
+
+#headStopName {
+  font-size: 4.4vw;
+  text-align: center;
+  font-weight: 700;
+}
+
+#headTime {
+  font-family: sans-serif;
+  font-size: 3.90625vw;
+}
+
+#headLine, #headDest, #headMin {
+  text-align: center;  
+}
+
+#headLine {
+  border-right: solid 2px white;
+}
+
+#headDest {
+  text-align: left;
+  border-right: solid 2px white;
+}
+
+#headMin {  
+  padding-left: 4px;
+  -webkit-transform:scaleX(0.7); 
+}
+
+/* table head */
+#divHeadStopHour {
+  font-size: 2.1875vw;
+  background-color: #CC1532;
+  margin-top: 3%;
+}
+
+/* next departure container container */
+
+#stopHourLine {
+  font-weight: 900;
+
+  text-align: center;
+  padding: 0 0 0 0;
+}
+
+#stopHourDest {
+  font-weight: 500;
+  text-align: left;
+  padding-top: 26px;
+  font-size: 4.296875vw;
+  -webkit-transform:scaleY(1.7); 
+  -moz-transform:scaleY(1.7); 
+  -o-transform:scaleY(1.7);
+}
+
+.stopHourMin {
+  font-size: 4.6875vw;
+  font-weight: 500;
+  text-align: right;
+  padding-top: 20px;
+  -webkit-transform:scaleX(0.8);
+  -webkit-transform:scaleY(1.9); 
+}
+
+.bloc-hour {
+  margin: 4px 0 0 0px;
+}
+
+.bloc-hr {
+  margin: 0 0 0 0;  
+}
+
+/* personnalisation de l'affichage de la destionation suivant le nombre de caractÃ¨res */
+.destination {
+  font-size: 4.296875vw !important;
+}
+.destinationSmall {
+  font-size: 3.396875vw !important;
+}
+
+/* personnalisation de l'affichage du numÃ©ro de ligne suivant le nombre de caractÃ¨res */
+.numLigne {
+  font-size: 7.8125vw !important;
+}
+.numLigneSmall {
+  font-size: 7.8125vw !important;
+  letter-spacing: -6px;
+}
+
+
+
+/* Footer Section */
+footer {
+  position: fixed;
+  font-size: 2.34375vw;
+  font-weight: normal;
+  text-align: center;
+
+  background-color: #CC1532;
+  width: 100%;
+}
+
+footer .left, footer .right {
+  background-color: grey;  
+}
+
+#footerLeft {
+  visibility: hidden;
+}
+
+#footerRight {
+  visibility: hidden;
+}
+
+@-webkit-keyframes blink {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink {
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.0, 0.6, 1.0);
+  -webkit-animation-duration: 1s;  
+}
+
+@media screen and (min-width: 601px) {
+  #stopHourDest {
+    padding-top: 26px;    
+  }
+  .stopHourMin {
+    padding-top: 20px;    
+  }    
+  .bloc-hr {
+    height: 20px;
+    line-height: 18px;
+  }
+  
+  footer {
+    bottom: 10px;     
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #stopHourDest {
+    padding-top: 10px;
+  }
+  .stopHourMin {
+    padding: 3px 0 0 0;
+  }  
+  .bloc-hr {
+    height: 10px;
+    line-height: 8px;
+  }
+  footer {
+    bottom: 0px;    
+  }
+}
+
+/* 
+ * Gestion affichage arrÃªt de substitution Ã  un arrÃªt non desservi
+ */
+
+.vscroll {
+  position: absolute;
+  overflow:hidden;
+}
+
+.vscroll .visible {
+  overflow:hidden;
+}
+
+.vscroll ul {
+  margin-top:0;
+  text-align:left;
+  list-style:none;
+  
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.vscroll ul li {
+  margin:0;
+}
+
+@media screen and (min-width: 200px) and (max-width: 375px) { 
+  .vscroll {
+    height: 66px;
+    line-height: 22px;
+    
+    margin-left: 50px;
+    margin-top: 7px;
+  }
+  
+  .vscroll .visible {
+    height: 22px;
+  }
+  .vscroll ul li {
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .vscroll {
+    height: 120px;
+    line-height: 40px;
+    
+    margin-left: 120px;
+    margin-top: 8px;
+  }
+  
+  .vscroll ul li {
+    height: 40px;
+  }
+  
+  .vscroll .visible {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 769px) {  
+  .vscroll {
+    height: 192px;
+    line-height: 64px;
+    
+    margin-left: 220px;
+    margin-top: 36px;
+  }
+  
+  .vscroll ul li {
+    height: 64px;
+  }
+  
+  .vscroll .visible {
+    height: 64px;
+  }
+}
+
+@-webkit-keyframes change {
+  0%, 35%  {transform:translateY(0%);}
+  60% {transform:translateY(-34%);}
+  75% {transform:translateY(-67%);}
+  95% {transform:translateY(-67%);}
+}
