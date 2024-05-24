@@ -3,7 +3,7 @@ let istart = (await Bun.file('scan.txt').text()).split('\n').length;
 let a = performance.now()
 const max = 100000;
 
-if (istart % 2 == 0) istart++;
+if (istart % 2 === 0) istart++;
 
 for (let i = istart; i < max; i+=2) {
     let code = "0".repeat(5-String(i).length) + String(i) 
