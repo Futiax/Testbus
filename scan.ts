@@ -6,7 +6,7 @@ for (let j = 1; j< n ; j++){
     const worker = new Worker(workerURL);
     worker.postMessage(`${n};${istart+j}`);
     worker.onerror = (ev) => {
-        console.error(`Worker crashed with error: `)
+        console.error(`Worker crashed with error: ${ev.message}`)
     }
 }
 const max = 100000;
