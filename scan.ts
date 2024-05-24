@@ -5,7 +5,7 @@ if (istart%2 === 1){
 }
 const workerURL = new URL("worker.ts", import.meta.url).href;
 const worker = new Worker(workerURL);
-let a = performance.now()
+let a = performance.now();
 const max = 100000;
 
 for (let i = istart; i < max; i+=2) {
