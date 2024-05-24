@@ -1,5 +1,5 @@
 import { appendFile } from "node:fs/promises";
-const istart = (await Bun.file('scan.txt').text()).split('\n').length;
+let istart = (await Bun.file('scan.txt').text()).split('\n').length;
 if (istart%2 === 1){
     istart -=1
 }
