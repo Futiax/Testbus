@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":17002,"reduceName":"RTSOUR_2","stopName":"Route des Sources","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731696911}}]
+[[{"recordedAtTime":"2024-11-15 19:54:39+01:00","route_id":129,"route_short_name":"21","route_color":"#FF5565","route_text_color":"#000000","destination_id":1,"route_dest":"Mornac Quéroy","route_dest_long":"Mornac Quéroy","stopHours":180,"stopHoursType":"E","stopSkipped":0}]]

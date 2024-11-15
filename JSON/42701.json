@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":42701,"reduceName":"VILLON_1","stopName":"Villon","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731697801}}]
+[[{"recordedAtTime":"2024-11-15 20:10:01+01:00","route_id":23,"route_short_name":"4","route_color":"#E7792B","route_text_color":"#000000","destination_id":1,"route_dest":"Angoulême Arche","route_dest_long":"Angoulême Arche","stopHours":1440,"stopHoursType":"T","stopSkipped":0}]]

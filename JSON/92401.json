@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":92401,"reduceName":"LAGRAN_1","stopName":"La Grange","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731699536}}]
+[[{"recordedAtTime":"2024-11-15 20:38:39+01:00","route_id":49,"route_short_name":"9","route_color":"#4F0064","route_text_color":"#FFFFFF","destination_id":0,"route_dest":"La Pouyade","route_dest_long":"La Pouyade","stopHours":480,"stopHoursType":"E","stopSkipped":0}]]

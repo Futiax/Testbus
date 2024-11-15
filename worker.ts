@@ -9,11 +9,11 @@ async function main(n, istart) {
     const max = 100000;
     for (let i = istart; i < max; i += n) {
         let code = "0".repeat(5 - String(i).length) + String(i);
-        let reponse = await (
+        let reponse = await await await (
             await fetch(`https://api11.stga.fr/saesi-ws/getHoursByStopCode.php?stopCode=${code}`)
         ).json();
-        if (reponse.length > 0) {
-            Bun.write(`./JSON/${code}.json`, JSON.stringify(reponse));
-        }
+        let info = reponse.infos;
+        let route = reponse.routes;
+        Bun.write(`./JSON/${code}.json`, JSON.stringify(info) + "\n" + JSON.stringify(route));
     }
 }

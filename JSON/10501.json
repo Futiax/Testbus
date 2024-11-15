@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":10501,"reduceName":"PARC_1","stopName":"Parc","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731696700}}]
+[[{"recordedAtTime":"2024-11-15 19:51:40+01:00","route_id":94,"route_short_name":"2","route_color":"#CEB431","route_text_color":"#000000","destination_id":0,"route_dest":"La Couronne Gallands","route_dest_long":"La Couronne Gallands","stopHours":2580,"stopHoursType":"T","stopSkipped":0}]]

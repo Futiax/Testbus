@@ -5,9 +5,6 @@ const workerURL = new URL("worker.ts", import.meta.url).href;
 for (let j = 1; j < n; j++) {
     const worker = new Worker(workerURL);
     worker.postMessage(`${n};${istart + j}`);
-    worker.onerror = async (ev) => {
-        await appendFile("log.txt", `Worker crashed with error: ${ev.message}`);
-    };
 }
 const max = 100000;
 let a = performance.now();
@@ -22,8 +19,10 @@ for (let i = istart; i < max; i += n) {
             Math.round((tempmoy * (max - i)) % 60000) / 1000
         }`
     );
-    let reponse = await (await fetch(`https://api11.stga.fr/saesi-ws/getHoursByStopCode.php?stopCode=${code}`)).json();
-    if (reponse.length > 0) {
-        Bun.write(`./JSON/${code}.json`, JSON.stringify(reponse));
-    }
+    let reponse = await await await (
+        await fetch(`https://api11.stga.fr/saesi-ws/getHoursByStopCode.php?stopCode=${code}`)
+    ).json();
+    let info = reponse.infos;
+    let route = reponse.routes;
+    Bun.write(`./JSON/${code}.json`, JSON.stringify(info) + "\n" + JSON.stringify(route));
 }

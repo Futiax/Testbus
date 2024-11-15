@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":97401,"reduceName":"PLNEAU_1","stopName":"Route Bellevue","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731699707}}]
+[[{"recordedAtTime":"2024-11-15 20:41:39+01:00","route_id":49,"route_short_name":"9","route_color":"#4F0064","route_text_color":"#FFFFFF","destination_id":0,"route_dest":"La Pouyade","route_dest_long":"La Pouyade","stopHours":360,"stopHoursType":"E","stopSkipped":0}]]

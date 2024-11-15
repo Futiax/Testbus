@@ -1,0 +1,2 @@
+[{"stop":{"stopCode":30202,"reduceName":"CARREF_2","stopName":"Dagnas","RTAvailabe":false},"error":{"code":0,"msg":""},"timeStamp":{"datetime":1731697351}}]
+[[{"recordedAtTime":"2024-11-15 20:01:39+01:00","route_id":4,"route_short_name":"3","route_color":"#009CBB","route_text_color":"#FFFFFF","destination_id":1,"route_dest":"St Yrieix Rochers","route_dest_long":"St Yrieix Rochers","stopHours":360,"stopHoursType":"E","stopSkipped":0}]]
