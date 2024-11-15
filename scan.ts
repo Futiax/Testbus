@@ -16,5 +16,5 @@ for (let i = istart; i < max; i+=n) {
     process.stdout.write('\x1Bc');
     let tempmoy =  (performance.now()-a)/(i-istart)
     console.log(`duré moyenne d'une itération: ${tempmoy}ms\nprogression : ${((i+1)*100)/max}%\nTemps restant estimé : ${(Math.floor(tempmoy*(max-i)/60000))}min${(Math.round(tempmoy*(max-i)%60000))/1000}`);
-    await appendFile("scan.txt", `${code}` + " : " + ((await (await fetch(`https://api11.stga.fr/saesi-ws/getHoursByStopCode.php?stopCode=${code}`)).json()).infos[0].stop.stopName||"Nothing") + "\n");
+    await appendFile("scan.txt", `${code}` + " : " + ((await (await fetch(`https://api11.stga.fr/saesi-ws/getHoursByStopCode.php?stopCode=${code}`)).json())||"Nothing") + "\n");
 }
